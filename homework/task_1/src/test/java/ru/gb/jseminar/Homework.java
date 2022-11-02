@@ -1,8 +1,10 @@
 package ru.gb.jseminar;
 
+import java.io.Console;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Set;
 
 public class Homework {
 
@@ -25,49 +27,53 @@ public class Homework {
         Integer c = Integer.parseInt(enter.next());
         System.out.print("Enter в: ");
         Integer d = Integer.parseInt(enter.next());
-        ArrayList<String> tamp = homework.doIt(a, b, c, d);
-        for (String i : tamp) {
-            System.out.println(i);
-            
+        ArrayList[] tamp = homework.doIt(a, b, c, d);
+        for (ArrayList<String> i : tamp) {
+            for (String j : i) {
+            System.out.println(j);
+            }
+            System.out.println("______________");
         }
     }
 
-    public ArrayList<String> doIt(Integer a, Integer b, Integer c, Integer d){
+    public ArrayList[] doIt(Integer a, Integer b, Integer c, Integer d){
         ArrayList<String> sumList = new ArrayList<>();
-        recurs_d(a, b, sumList);
-        recurs_с(a, b, sumList);
-        return sumList;
+        String sum_string = new String();
+        ArrayList<String> ansver = recurs_d(a, b, sum_string, sumList);
+        ArrayList<String> ansver_two =  recurs_с(a, b, sum_string, sumList);
+        ArrayList[] ansver_all = {ansver, ansver_two};
+        return ansver_all;
     }
-    public void recurs_с(Integer a, Integer b, ArrayList<String> doing ){
+    public ArrayList<String>  recurs_с(Integer a, Integer b, String doing, ArrayList<String> list ){
         a *= 2;
         if(a == b){
-            doing.add("k1");
-            return;
+            doing += "k1";
+            return list.add(doing);
         }
         else if(a > b){
-            return;
+            return 0;
         }
         else{
-            doing.add("k1");
-            recurs_с(a, b, doing);
-            recurs_d(a, b, doing);
+            doing += "k1";
+            recurs_с(a, b, doing, list);
+            recurs_d(a, b, doing, list);
         }
         
     }
-    public void recurs_d(Integer a, Integer b, ArrayList<String> doing){
+    public ArrayList<String>  recurs_d(Integer a, Integer b, String doing, ArrayList<String> list){
         
-        a += 2;
+    a += 2;
     if(a == b){
-        doing.add("k2");
-        return ;
+        doing += "k2";
+        return list.add(doing);
     }
     else if(a > b){
-        return;
+        return 0;
     }
     else{
-        doing.add("k2");
-        recurs_с(a, b, doing);
-        recurs_d(a, b, doing);
+        doing += k2;
+        recurs_с(a, b, doing, ist);
+        recurs_d(a, b, doing, list);
     }
     }
 }
