@@ -13,9 +13,9 @@ public class Task1 {
 
     }
 
-    public List<Integer> getNumberOfCouples(final List<Integer> list){
+    public Integer getNumberOfCouples(final List<Integer> list){
 
-        return new ArrayList<>();
+        return 0;
     }
 
 }
