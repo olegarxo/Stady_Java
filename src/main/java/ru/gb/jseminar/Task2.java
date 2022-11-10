@@ -10,11 +10,11 @@ public class Task2 {
     // ”Город А” до“Город Б”. Верните город назначения, то есть город без какого-либо пути, ведущего в другой город.
     // Пример 1: Input: s = [["Москва","Самара"], ["Курск","Пенза"],["Самара","Курск"]]  Output: Пенза
     // Пример 2: Input: s = [["Москва","Самара"]]  Output: Самара
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
 
     }
 
-    public String getFinalCity(Map<String, String> map){
+    public String getFinalCity(final Map<String, String> map){
 
         return "";
     }

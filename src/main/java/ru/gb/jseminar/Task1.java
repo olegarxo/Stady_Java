@@ -9,11 +9,11 @@ public class Task1 {
     // Пример 1:     In: arr = [1, 2]  Out: 0
     // Пример 2:     In: arr = [1, 1, 2]  Out: 1
     // Пример 3:     In: arr = [1, 1, 1, 2, 2]  Out: 4
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
 
     }
 
-    public List<Integer> getNumberOfCouples(List<Integer> list){
+    public List<Integer> getNumberOfCouples(final List<Integer> list){
 
         return new ArrayList<>();
     }

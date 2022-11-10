@@ -6,11 +6,11 @@ public class Task3 {
 
     // Дана строка. Необходимо написать метод, который отсортирует слова в строке по длине с помощью TreeMap.
     // Строки с одинаковой длиной не должны “потеряться”.
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
 
     }
 
-    public String getSortedIncludesWords(Map<String, String> map){
+    public String getSortedIncludesWords(final Map<String, String> map){
 
         return "";
     }
